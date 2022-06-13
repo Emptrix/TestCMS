@@ -31,7 +31,7 @@ namespace TestCMS.Pages.Users
             //save the new client into the database
             try
             {
-                String connectionString = "Data Source=(localdb)\\ProjectModels;Initial Catalog=Test;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+                String connectionString = Globals.CONNECTION_STRING;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
