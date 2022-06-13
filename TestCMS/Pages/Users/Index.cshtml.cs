@@ -9,6 +9,7 @@ namespace TestCMS.Pages.Users
         public  List<UserInfo> userInfos = new List<UserInfo>();
         public void OnGet()
         {
+            // Display all Users on the Web Interface
             try
             {
                 string connectionString = Globals.CONNECTION_STRING;

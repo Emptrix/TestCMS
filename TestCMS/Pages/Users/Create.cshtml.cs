@@ -22,13 +22,14 @@ namespace TestCMS.Pages.Users
             userInfo.userAccountId = Request.Form["userAccountId"];
             userInfo.username = Request.Form["username"];
             
+            // Only proceed if input fields are not empty
             if (userInfo.userAccountId.Length == 0 || userInfo.username.Length == 0)
             {
                 errorMessage = "All the fields are required";
                 return;
             }
 
-            //save the new client into the database
+            // Add new client into the database
             try
             {
                 String connectionString = Globals.CONNECTION_STRING;

@@ -2,6 +2,7 @@
 @using System.Data.SqlClient;
 @{
 
+// Delete desired account
 	try
 	{
 		string userAccountId = Request.Query["userAccountId"];
@@ -24,6 +25,7 @@
 
 	}
 
+// Return to Users Index page
 	Response.Redirect("/Users/Index");
 
 }
