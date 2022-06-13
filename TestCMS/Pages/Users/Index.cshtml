@@ -1,0 +1,29 @@
+﻿@page
+@model TestCMS.Pages.Users.IndexModel
+@{
+}
+
+<br>
+<h2>List of Users</h2>
+<a class = 'btn btn-primary btn-sm' href='\Users\Create'>New User</a>
+<table class ="table">
+	<thead>
+		<tr>
+			<th>User Account ID</th>
+			<th>Username</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model.userInfos)
+		{
+			<tr>
+				<td>@item.userAccountId</td>
+				<td>@item.username</td>
+				<td>
+					<a class="btn btn-primary btn-sm" href="/Users/Edit?userAccountId=@item.userAccountId">Edit</a>
+					<a class="btn btn-primary btn-sm" href="/Users/Delete?userAccountId=@item.userAccountId">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

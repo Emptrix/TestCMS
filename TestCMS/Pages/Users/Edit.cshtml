@@ -1,0 +1,53 @@
+﻿@page
+@model TestCMS.Pages.Users.EditModel
+@{
+}
+
+<br>
+<h2>Edit User</h2>
+
+@if (Model.errorMessage.Length > 0)
+{
+	<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+		<strong>@Model.errorMessage</strong>
+		<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+	</div>
+}
+
+<form method="POST">
+	<input type="hidden" name="id" value="@Model.userInfo.userAccountId">
+
+	<div class ="row mb-3">
+		<label class="col-sm-3 col-form-label">User Account ID</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="userAccountId" placeholder="@Model.userInfo.userAccountId" readonly value="@Model.userInfo.userAccountId">		
+		</div>
+	</div>
+	<div class ="row mb-3">
+		<label class="col-sm-3 col-form-label">Username</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="username" value="@Model.userInfo.username">		
+		</div>
+	</div>
+	
+	@if (Model.successMessage.Length > 0)
+	{
+	<div class="row mb-3">
+		<div class ="col-sm-9">
+			<div class='alert alert-success alert-dismissible fade show' role='alert'>
+				<strong>@Model.successMessage</strong>
+				<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+			</div>
+		</div>
+	</div>
+	}
+
+	<div class ="row mb-3">
+		<div class="offset-sm-3 col-sm-3 d-grid">
+			<button type="submit" class="btn-primary btn-primary">Submit</button>
+		</div>
+		<div class ="col-sm-3 d-grid">
+			<a class="btn btn-outline-primary" href="/" role="button">Cancel</a>
+		</div>
+	</div>
+</form>
