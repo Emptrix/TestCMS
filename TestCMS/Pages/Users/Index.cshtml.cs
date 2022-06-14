@@ -12,7 +12,7 @@ namespace TestCMS.Pages.Users
             // Display all Users on the Web Interface
             try
             {
-                string connectionString = Globals.CONNECTION_STRING;
+                string connectionString = Globals.DB_CONNECTION_STRING;
                 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {

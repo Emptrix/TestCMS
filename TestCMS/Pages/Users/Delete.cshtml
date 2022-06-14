@@ -7,7 +7,7 @@
 	{
 		string userAccountId = Request.Query["userAccountId"];
 
-		string connectionString = Globals.CONNECTION_STRING;
+		string connectionString = Globals.DB_CONNECTION_STRING;
 		using (SqlConnection connection = new SqlConnection(connectionString))
 		{
 			connection.Open();

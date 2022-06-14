@@ -32,7 +32,7 @@ namespace TestCMS.Pages.Users
             // Add new client into the database
             try
             {
-                String connectionString = Globals.CONNECTION_STRING;
+                String connectionString = Globals.DB_CONNECTION_STRING;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();

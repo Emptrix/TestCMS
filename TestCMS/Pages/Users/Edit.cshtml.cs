@@ -16,7 +16,7 @@ namespace TestCMS.Pages.Users
            
             try
             {
-                string connectionString = Globals.CONNECTION_STRING;
+                string connectionString = Globals.DB_CONNECTION_STRING;
                 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -56,7 +56,7 @@ namespace TestCMS.Pages.Users
             // Make desired changes to the specific username
             try
             {
-                String connectionString = Globals.CONNECTION_STRING;
+                String connectionString = Globals.DB_CONNECTION_STRING;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
